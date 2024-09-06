@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartzilla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqk1w2/knoG80k332eYXxWi6dg5ZcYt48Rn0CxstK31HLL57sL5mTkXxjlZ8N1cXbE45CqTx/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="bg-dark py-4">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <img src="" alt="Cartzilla logo" class="me-2">
+                <span class="fs-4 fw-bold text-white me-4">Cartzilla</span>
+            </div>
+            <div class="flex-grow-1 d-flex align-items-center">
+                <div class="position-relative w-100">
+                    <input type="text" placeholder="Search the products" class="form-control py-2 ps-5 pe-4 rounded-pill bg-secondary text-white">
+                    <i class="fas fa-search position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-1">
+                    <i class="fas fa-percent text-danger m-2"></i>
+                    <div>
+                        <span class="small text-white">Only this month</span>
+                        <span class="d-block fs-5 fw-bold text-white">Super Sale 20%</span>
+                    </div>
+                </div>
+                <i class="fas fa-sun text-white"></i>
+                <i class="fas fa-user text-white">
+                </i>
+                <i class="fas fa-heart text-white"></i>
+                <div class="position-relative">
+                    <i class="fas fa-shopping-cart text-white"></i>
+                    <span class="position-absolute top-0 end-0 bg-success text-white rounded-circle "></span>
+                </div>
+            </div>
+        </div>
+        <nav class="py-2 mt-3">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-dark d-flex align-items-center gap-1" type="button">
+                            <i class="fas fa-th-large"></i>
+                            <span>Categories</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <a href="#" class="text-white py-2 px-4  border-white">Home</a>
+                    <a href="#" class="text-white py-2 px-4">Account</a>
+                    <a href="#" class="text-white py-2 px-4">Pages</a>
+                    <a href="#" class="text-white py-2 px-4">Shop</a>
+                    <a href="#" class="text-white py-2 px-4">Docs</a>
+                    <a href="#" class="text-white py-2 px-4">Components</a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-dark d-flex align-items-center gap-1" type="button">
+                            <span>Eng</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-dark d-flex align-items-center gap-1" type="button">
+                            <span>USD ($)</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="./pages/script.js"></script>
+</body>
+</html>
