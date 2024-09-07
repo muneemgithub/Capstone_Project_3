@@ -1,79 +1,571 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartzilla</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqk1w2/knoG80k332eYXxWi6dg5ZcYt48Rn0CxstK31HLL57sL5mTkXxjlZ8N1cXbE45CqTx/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Cartzilla
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header class="bg-dark py-4">
-        <div class="container d-flex align-items-center justify-content-between">
+    <header class="bg-dark text-white d-flex align-items-center justify-content-between p-4">
+        <div class="d-flex align-items-center gap-4">
             <div class="d-flex align-items-center">
-                <img src="" alt="Cartzilla logo" class="me-2">
-                <span class="fs-4 fw-bold text-white me-4">Cartzilla</span>
+                <img alt="Cartzilla logo" class="me-2" src="./images/Capture-logo.PNG" />
             </div>
-            <div class="flex-grow-1 d-flex align-items-center">
-                <div class="position-relative w-100">
-                    <input type="text" placeholder="Search the products" class="form-control py-2 ps-5 pe-4 rounded-pill bg-secondary text-white">
-                    <i class="fas fa-search position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
+        </div>
+        <div class="flex-grow-1 mx-4">
+            <div class="position-relative d-flex justify-content-center">
+                <input class="form-control w-75 bg-secondary text-white border-0 rounded-pill"
+                    placeholder="Search the products" type="text" />
+                <i class="position-absolute top-50 start-50 translate-middle text-secondary">
+                </i>
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-5">
+            <div class="d-flex align-items-center gap-3  px-3 py-2">
+                <i class="fa-solid fa-percent text-danger ">
+                </i>
+                <div>
+                    <span class="small text-white">
+                        Only this month
+                    </span>
+                    <span class="d-block fs-6 fw-bold">
+                        Super Sale 20%
+                    </span>
                 </div>
             </div>
-            <div class="d-flex align-items-center gap-3">
-                <div class="d-flex align-items-center gap-1">
-                    <i class="fas fa-percent text-danger m-2"></i>
-                    <div>
-                        <span class="small text-white">Only this month</span>
-                        <span class="d-block fs-5 fw-bold text-white">Super Sale 20%</span>
+            <i class="fa-regular fa-sun text-secondary">
+            </i>
+            <i class="fa-regular fa-user text-secondary">
+            </i>
+            <i class="fa-regular fa-heart text-secondary">
+            </i>
+            <div class="position-relative">
+                <i class="fas fa-shopping-cart text-secondary">
+                </i>
+                <span
+                    class="position-absolute top-0 start-100 translate-middle bg-success rounded-circle text-white d-flex align-items-center justify-content-center"
+                    style="width: 20px; height: 20px;">
+                    3
+                </span>
+            </div>
+        </div>
+    </header>
+    <nav class="d-flex align-items-center justify-content-between px-4 py-2 bg-dark">
+        <div class="d-flex align-items-center gap-4 ">
+            <div class="position-relative">
+                <li class="nav-item dropdown mb-4">
+                    <a class="nav-link dropdown-toggle text-white ms-5 ps-5 fs-5 fw-bold" href="#" role="button">
+                        Categories
+                    </a>
+                </li>
+            </div>
+            <a class="text-white ms-5 ps-5">
+                Home
+                <i class="fas fa-chevron-down">
+                </i>
+            </a>
+            <a class="text-white" href="#">
+                Shop
+                <i class="fas fa-chevron-down">
+                </i>
+            </a>
+            <a class="text-white" href="#">
+                Account
+                <i class="fas fa-chevron-down">
+                </i>
+            </a>
+            <a class="text-white" href="#">
+                Pages
+                <i class="fas fa-chevron-down">
+                </i>
+            </a>
+            <a class="text-white" href="#">
+                Docs
+            </a>
+            <a class="text-white" href="#">
+                Components
+            </a>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+            <div class="position-relative">
+                <button class="btn btn-dark d-flex align-items-center">
+                    <span>
+                        Eng
+                    </span>
+                    <i class="fas fa-chevron-down ms-2">
+                    </i>
+                </button>
+            </div>
+            <div class="position-relative">
+                <button class="btn btn-dark d-flex align-items-center">
+                    <span>
+                        USD ($)
+                    </span>
+
+                    <i class="fas fa-chevron-down ms-2">
+                    </i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <div class="d-flex">
+        <div class="col-3 bg-white p-4 ms-5 shadow-lg">
+            <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fa fa-desktop me-2"></i>
+                    <span>Computers & Accessories</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-mobile-alt me-2"></i>
+                    <span>Smartphones & Tablets</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-tv me-2"></i>
+                    <span>TV, Video & Audio</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-music me-2"></i>
+                    <span>Speakers & Home Music</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-camera me-2"></i>
+                    <span>Cameras, Photo & Video</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-print me-2"></i>
+                    <span>Printers & Ink</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-charging-station me-2"></i>
+                    <span>Charging Stations</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-headphones-alt me-2"></i>
+                    <span>Headphones</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-watch me-2"></i>
+                    <span>Wearable Electronics</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-battery-full me-2"></i>
+                    <span>Powerbanks</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-hdd me-2"></i>
+                    <span>HDD/SSD Data Storage</span>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                    <i class="fas fa-gamepad me-2"></i>
+                    <span>Video Games</span>
+                </li>
+            </ul>
+        </div>
+        <!-- here is add carousel -->
+    </div>
+
+    <section class="container pt-5 mt-1 mt-sm-3 mt-lg-4">
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="d-flex flex-column flex-xxl-row align-items-center">
+                    <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-circle p-4 mb-3 mb-xxl-0">
+                        <i class="fas fa-truck fs-2 m-xxl-1"></i>
+                    </div>
+                    <div class="text-center text-xxl-start ps-xxl-3">
+                        <h3 class="h6 mb-1">Free Shipping &amp; Returns</h3>
+                        <p class="fs-sm mb-0">For all orders over $199.00</p>
                     </div>
                 </div>
-                <i class="fas fa-sun text-white"></i>
-                <i class="fas fa-user text-white">
-                </i>
-                <i class="fas fa-heart text-white"></i>
-                <div class="position-relative">
-                    <i class="fas fa-shopping-cart text-white"></i>
-                    <span class="position-absolute top-0 end-0 bg-success text-white rounded-circle "></span>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column flex-xxl-row align-items-center">
+                    <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-circle p-4 mb-3 mb-xxl-0">
+                        <i class="fas fa-credit-card fs-2 m-xxl-1"></i>
+                    </div>
+                    <div class="text-center text-xxl-start ps-xxl-3">
+                        <h3 class="h6 mb-1">Secure Payment</h3>
+                        <p class="fs-sm mb-0">We ensure secure payment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column flex-xxl-row align-items-center">
+                    <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-circle p-4 mb-3 mb-xxl-0">
+                        <i class="fas fa-sync fs-2 m-xxl-1"></i>
+                    </div>
+                    <div class="text-center text-xxl-start ps-xxl-3">
+                        <h3 class="h6 mb-1">Money Back Guarantee</h3>
+                        <p class="fs-sm mb-0">Returning money 30 days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column flex-xxl-row align-items-center">
+                    <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-circle p-4 mb-3 mb-xxl-0">
+                        <i class="fas fa-headset fs-2 m-xxl-1"></i>
+                    </div>
+                    <div class="text-center text-xxl-start ps-xxl-3">
+                        <h3 class="h6 mb-1">24/7 Customer Support</h3>
+                        <p class="fs-sm mb-0">Friendly customer support</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <nav class="py-2 mt-3">
-            <div class="container d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="dropdown">
-                        <button class="btn btn-dark d-flex align-items-center gap-1" type="button">
-                            <i class="fas fa-th-large"></i>
-                            <span>Categories</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+    </section>
+
+
+    <!-- New Arrival -->
+    <section class="container pt-5 mt-1 mt-sm-2 mt-md-3 mt-lg-4">
+        <h2 class="h3 pb-2 pb-sm-3">New arrivals</h2>
+        <div class="row">
+
+            <!-- Banner -->
+            <div class="col-lg-4" data-bs-theme="dark">
+                <div class="d-flex flex-column align-items-center justify-content-end w-100 h-100 text-center overflow-hidden rounded-5 px-4 px-lg-3 pt-4 pb-5"
+                    style="background: #1d2c41 url(./images/laptop.png) center/cover no-repeat">
+                    <div class="ratio animate-up-down position-relative  me-lg-4">
+                        <img src="..." alt="Laptop">
                     </div>
-                    <a href="#" class="text-white py-2 px-4  border-white">Home</a>
-                    <a href="#" class="text-white py-2 px-4">Account</a>
-                    <a href="#" class="text-white py-2 px-4">Pages</a>
-                    <a href="#" class="text-white py-2 px-4">Shop</a>
-                    <a href="#" class="text-white py-2 px-4">Docs</a>
-                    <a href="#" class="text-white py-2 px-4">Components</a>
+                    <h3 class="display-2 mb-2 text-white fw-semibold">MacBook</h3>
+                    <p class="text-body fw-medium mb-4">Be Pro Anywhere</p>
+                    <a class="btn btn-sm btn-danger" href="#!">
+                        From $1,199
+                    </a>
                 </div>
-                <div class="d-flex align-items-center gap-3">
-                    <div class="dropdown">
-                        <button class="btn btn-dark d-flex align-items-center gap-1" type="button">
-                            <span>Eng</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+            </div>
+
+            <!-- Product list -->
+            <div class="col-sm-6 col-lg-4 d-flex flex-column gap-3 pt-4 py-lg-4">
+
+                <!-- Item -->
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/03.png" alt="Smart Watch">
                     </div>
-                    <div class="dropdown">
-                        <button class="btn btn-dark d-flex align-items-center gap-1" type="button">
-                            <span>USD ($)</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star  text-warning"></i>
+                                <i class="fa-solid fa-star  text-warning"></i>
+                                <i class="fa-solid fa-star  text-warning"></i>
+                                <i class="fa-solid fa-star  text-warning"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">45</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">Smart Watch Series 7, White</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$449.00</div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/01 (1).png" width="110" alt="VR Glasses">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star  text-warning"></i>
+                                <i class="fa-solid fa-star  text-warning"></i>
+                                <i class="fa-solid fa-star  text-warning"></i>
+                                <i class="fa-solid fa-star-half text-warning"></i>
+                                <i class="fa-solid fa-star  text-body-tertiary opacity-50"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">123</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">VRB01 Virtual Reality Glasses</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$340.99</div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/cartzilla1.png" width="110" alt="Bluetooth Headphones">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-body-tertiary opacity-75"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">34</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">Wireless Bluetooth Headphones Sony</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$357.00</div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/cartzilla1 (1).png" width="110" alt="MacBook">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">34</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">Laptop Apple MacBook Pro 13 M2</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$1,200.00</div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <script src="./pages/script.js"></script>
+            <div class="col-sm-6 col-lg-4 d-flex flex-column gap-3 pt-3 py-lg-4">
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/cartzilla1 (2).png" width="110" alt="iPad Pro">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-body-tertiary opacity-75"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">126</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">Tablet Apple iPad Air M1</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$540.00</div>
+                    </div>
+                </div>
+
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/airports.png" width="110" alt="AirPods 2 Pro">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">340</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html"><span class="animate-target">Headphones
+                                    Apple AirPods 2 Pro</span></h6>
+                        </h4>
+                        <div class="h5 mb-0">$209.99 <del class="text-body-tertiary fs-sm fw-normal">$356.00</del></div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/cartzilla1 (3).png" width="110" alt="Power Bank">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-body-tertiary opacity-75"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">29</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">Power Bank PBS 10000 mAh Black</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$49.99</div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                    <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+                        <img src="./images/02.png" width="110" alt="iPhone 14">
+                    </div>
+                    <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <div class="d-flex gap-1 fs-xs">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                            <span class="text-body-tertiary fs-xs">12</span>
+                        </div>
+                        <h4 class="mb-2">
+                            <h6 class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                href="shop-product-general-electronics.html">
+                                <span class="animate-target">Apple iPhone 14 128GB White</span>
+                            </h6>
+                        </h4>
+                        <div class="h5 mb-0">$899.00 <del class="text-body-tertiary fs-sm fw-normal">$958.00</del></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Trending Products -->
+    <section class="container pt-5 mt-2 mt-sm-3 mt-lg-4">
+        <div class="d-flex align-items-center justify-content-between border-bottom pb-3 pb-md-4">
+          <h2 class="h3 mb-0">Trending products</h2>
+          <div class="nav ms-3">
+            <a class="nav-link animate-underline px-0 py-2" href="shop-catalog-electronics.html">
+              <h6 class="animate-target">View all</h6>
+              <i class="ci-chevron-right fs-base ms-1"></i>
+            </a>
+          </div>
+        </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 pt-4">
+
+        <!-- Item -->
+        <div class="col">
+          <div class="product-card animate-underline hover-effect-opacity bg-body rounded">
+            <div class="position-relative">
+              <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
+                <div class="d-flex flex-column gap-2">
+                  <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
+                    <i class="ci-heart fs-base animate-target"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
+                    <i class="ci-refresh-cw fs-base animate-target"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
+                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                  <i class="ci-more-vertical fs-lg"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
+                  <li>
+                    <a class="dropdown-item" href="#!">
+                      <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                      Add to Wishlist
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#!">
+                      <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                      Compare
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                <span class="badge bg-danger position-absolute top-0 start-0 mt-2 ms-2 mt-lg-3 ms-lg-3">-21%</span>
+                <div class="ratio">
+                    <img src="/images/01 (1).png" alt="VR Glasses">
+                </div>
+            </a>
+            </div>
+            <div class="w-100 min-w-0 px-1 pb-2 px-sm-3 pb-sm-3">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div class="d-flex gap-1 fs-xs">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-body-tertiary opacity-75"></i>
+                </div>
+                <span class="text-body-tertiary fs-xs">(123)</span>
+              </div>
+              <h3 class="pb-1 mb-2">
+                <h6 class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
+                  <span class="animate-target">VRB01 Virtual Reality Glasses</span>
+                </h6>
+              </h3>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="h5 lh-1 mb-0">$340.99 <del class="text-body-tertiary fs-sm fw-normal">$430.00</del></div>
+                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
+                  <i class="ci-shopping-cart fs-base animate-target"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+              <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
+              <ul class="list-unstyled d-flex flex-column gap-2 m-0">
+                <li class="d-flex align-items-center">
+                  <span class="fs-xs">Display:</span>
+                  <span class="d-block flex-grow-1 border-bottom border-dashed px-1 mt-2 mx-2"></span>
+                  <span class="text-dark-emphasis fs-xs fw-medium text-end">OLED 1440x1600</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <span class="fs-xs">Graphics:</span>
+                  <span class="d-block flex-grow-1 border-bottom border-dashed px-1 mt-2 mx-2"></span>
+                  <span class="text-dark-emphasis fs-xs fw-medium text-end">Adreno 540</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <span class="fs-xs">Sound:</span>
+                  <span class="d-block flex-grow-1 border-bottom border-dashed px-1 mt-2 mx-2"></span>
+                  <span class="text-dark-emphasis fs-xs fw-medium text-end">2x3.5mm jack</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <span class="fs-xs">Input:</span>
+                  <span class="d-block flex-grow-1 border-bottom border-dashed px-1 mt-2 mx-2"></span>
+                  <span class="text-dark-emphasis fs-xs fw-medium text-end">4 built-in cameras</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 </body>
+
 </html>
