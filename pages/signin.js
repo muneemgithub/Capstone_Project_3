@@ -1,4 +1,5 @@
-document.getElementById('signupForm').addEventListener('submit', function(event){
+document.getElementById('signupForm')
+.addEventListener('submit', function(event){
     event.preventDefault();
     
     let userEmail = document.getElementById('userEmail').value
@@ -11,6 +12,6 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
        localStorage.setItem('Password',userPassword)
 
        alert("Registration is completed!")
-       window.location.href = "/pages/login.html" 
+       window.location.href = "./login.html" 
     }
 });

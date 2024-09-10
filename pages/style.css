@@ -1,3 +1,6 @@
+.carousel-inner{
+  background-color: #accbee;
+}
 .product-card-details {
     display: none;
     max-width: 20%;
