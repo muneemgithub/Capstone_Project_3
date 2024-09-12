@@ -1,18 +1,26 @@
-document.getElementById('loginForm').addEventListener('submit', function(event){
-    event.preventDefault();
+document.getElementById('loginForm')
+.addEventListener('submit', async function (e)  {
+  e.preventDefault();
+  const useremail = document.getElementById('userEmail').value;
+  const userpassword = document.getElementById('userPassword').value;
 
-    let localEmail = localStorage.getItem('Email');
-    let localPassword = localStorage.getItem('Password');
+  try {
+      // Fetching all users from the API
+      const response = await fetch('https://fakestoreapi.com/users');
+      const users = await response.json();
 
-    let userEmail = document.getElementById('userEmail').value
-    let userPassword = document.getElementById('userPassword').value
+      // Check if the user exists and password matches
+      const user = users.find(user => user.email === useremail && user.password === userpassword);
 
-    if(userEmail === localEmail && userPassword === localPassword){
-        alert("Login successfully!");
-        window.location.href = "../index.html";
-        
-    } else{
-        alert("Wrong password!");
-    }
-    
-})
+      if (user) {
+          alert('Login successful!');
+          window.location.href = "../index.html"
+          // Redirect or do something after successful login
+      } else {
+          alert('Invalid username or password.');
+      }
+  } catch (error) {
+      alert('Error logging in.');
+      console.error(error);
+  }
+});
