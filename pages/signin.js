@@ -1,4 +1,5 @@
-document.getElementById('signupForm').addEventListener('submit', async function (e) {
+document.getElementById('signupForm')
+.addEventListener('submit', async function (e) {
     e.preventDefault();
     const useremail = document.getElementById('signup-useremail').value;
     const password = document.getElementById('signup-password').value;
