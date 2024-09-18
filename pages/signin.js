@@ -11,7 +11,7 @@ document.getElementById('signupForm')
         // You can add more user fields as required by the API (e.g., name, email, address)
     };
 
-    try {
+    try { 
         const response = await fetch('https://fakestoreapi.com/users', {
             method: 'POST',
             headers: {
@@ -19,7 +19,7 @@ document.getElementById('signupForm')
             },
             body: JSON.stringify(user),
         });
-
+  
         const data = await response.json();
         alert('User created successfully. Now you can log in.');
         window.location.href = "./login.html"
